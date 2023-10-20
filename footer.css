@@ -1,0 +1,71 @@
+/* Media Query for 768px breakpoint */
+@media (max-width: 768px) {
+  .footer {
+    width: 100%;
+    .logo-footer {
+      width: auto;
+    }
+  }
+
+  .footer-column {
+    flex-basis: 100%;
+  }
+  .logo-footer {
+      width: auto;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px){
+  .footer {
+    width: 100%;
+    .logo-footer {
+      width: auto;
+    }
+  }
+
+  .footer-column {
+    flex-basis: 100%;
+  }
+  .logo-footer {
+      width: auto;
+    }
+}
+
+
+
+
+  /* Default styles for the footer */
+.footer {
+    background-color: #464646;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    color: white;
+  }
+  
+  .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 20px;
+  }
+  
+  .ftr-text {
+    background-color: transparent;
+    float: none;
+  }
+  
+  .logo-footer {
+    max-width: 1200px;
+    width: 80%;
+    padding: 0px;
+    fill: #fff !important;
+  }
+  
+  .logo-footer {
+    filter: invert(100%); /* Invert the colors to turn black to white */
+  }
+  
+  

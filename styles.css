@@ -1,3 +1,330 @@
-h1 {
-    color: red;
+
+body {
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  html, body {
+    overflow-x: hidden;
+  }
+  .navbar {
+    background-color: #ffffff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0px 5px 3px rgb(210, 210, 210);
+  }
+  
+  .navbar-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 10px;
+    
+  }
+  
+  .navbar-logo {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+  }
+  .logo{
+    max-width: 1200px;
+    width: 15%;
+    padding: 10px;
+   
+  }
+  .logo-footer {
+    filter: invert(100%); /* Invert the colors to turn black to white */
+  }
+
+
+.navbar-text{
+  
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+  width: 100%;
+  flex: 1;
+  text-align: center;
+  font-weight: 500;
+}
+i{
+  margin-right: 10px;
+}
+
+
+
+
+  /* navbar-container ----------------------------- 3*/
+
+  .navbar-container{
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0px;
+    width: 100%;
+    height: 300px;
+  }
+  .navbar-contanier-content{
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    padding: 10px;
+  }
+  .navbar-container-text{
+    flex: 1;
+    text-align: center;
+    
+  }
+  .navbar-container-text-p{
+    font-size: 28px;
+    font-weight: 300; 
+    
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25%; /* Adjust this value based on your layout */
+    
+  }
+  
+  .centered-button {
+    padding: 25px 50px;
+    font-size: 18px;
+    background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+  }
+  
+  
+  
+
+
+
+
+/* Animation --------------------------------------------Styles for the preloader */
+.preloader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  animation: hidePreloader 4s forwards;
+  opacity: 1; 
+}
+
+@keyframes hidePreloader {
+  0% { opacity: 1; }
+  90% { opacity: 1; } 
+  100% { opacity: 0; visibility: hidden; }
+}
+
+/* Animation ---------------------------------------- Styles for the rotating spinner */
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #99E2D0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Animation --------------------------------------- Styles for the main content */
+.content-loader {
+  display: none;
+  opacity: 0; /* Initial opacity */
+  transition: opacity 1s; /* smooth fade-in effect */
+}
+
+/* --------------------------------------------- Show content after preloader */
+.preloader-container + .content-loader {
+  display: block;
+  opacity: 1; /* Fade in the content */
+}
+
+
+
+/* Heartin Icon 
+----------------------------------------------------------------------- main page*/
+
+  .heart {
+    /* position: relative; */
+    transform: rotate(45deg);
+    width: 40px;
+    height: 25px;
+    border-radius: 25px 0 0 25px;
+    border: 3px solid #000000;
+    position: absolute;
+    top: 82%;
+    right: 9%;
+  }
+
+  
+  .heart::after {
+    content: "";
+    position: absolute;
+    top: -19px;
+    left: 12px;
+    height: 19px;
+    width: 25px;
+    border-radius: 25px 25px 0 0;
+    border: inherit;
+    border-bottom: transparent;
+  }
+  
+  .heart,
+  .heart::after {
+    background:  #ffffff
+  ;
+    transition: all 0.35s;
+  }
+  
+  .heart:hover,
+  .heart:hover::after {
+    background:  #FF79DA;
+  }
+
+
+
+
+  @media (max-width: 786px){
+    .navbar,
+    .navbar-layer,
+    .navbar-container {
+      width: 100%;
+      padding: 0px;
     }
+  
+    .navbar-content,
+    .navbar-layer-content,
+    .navbar-contanier-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .logo,
+    .logo-footer {
+      width: 50%;
+    }
+  
+    .navbar-logo,
+    .navbar-layer-text,
+    .navbar-container-text {
+      text-align: center;
+    }
+  
+    .navbar-container-text-p {
+      font-size: 24px;
+    }
+  
+    .centered-button {
+      padding: 20px 40px;
+      font-size: 16px;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 992px){
+    .navbar,
+    .navbar-layer,
+    .navbar-container {
+      width: auto;
+      padding: 0px;
+    }
+  
+    .navbar-content,
+    .navbar-layer-content,
+    .navbar-contanier-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .logo,
+    .logo-footer {
+      width: auto;
+    }
+  
+    .navbar-logo,
+    .navbar-layer-text,
+    .navbar-container-text {
+      text-align: center;
+    }
+  
+    .navbar-container-text-p {
+      font-size: 24px;
+    }
+  
+    .centered-button {
+      padding: 20px 40px;
+      font-size: 16px;
+    }
+
+
+
+  }
+  
+
+  @media (min-width: 992px){
+    .navbar,
+    .navbar-layer,
+    .navbar-container {
+      width: auto;
+      padding: 0px;
+    }
+  
+    .navbar-content,
+    .navbar-layer-content,
+    .navbar-contanier-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .logo,
+    .logo-footer {
+      width: auto;
+    }
+  
+    .navbar-logo,
+    .navbar-layer-text,
+    .navbar-container-text {
+      text-align: center;
+    }
+  
+    .navbar-container-text-p {
+      font-size: 24px;
+    }
+  
+    .centered-button {
+      padding: 20px 40px;
+      font-size: 16px;
+    }
+
+
+  }
